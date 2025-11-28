@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,75 +10,174 @@
 
 <body>
 
-<!-- HEADER (virker på alle sider) -->
-<header class="header">
+    <!-- HEADER (virker på alle sider) -->
+    <header class="header">
 
-    <a href="login.html" class="icon-link">
-        <img src="ikon/Log ind.svg" alt="Log ind" class="icon login-icon">
-    </a>
-
-    <a href="index.html" class="logo-link">
-        <img src="ikon/Logo.svg" alt="Logo" class="logo">
-    </a>
-
-    <img src="ikon/Burger_menu.svg" class="burger-icon" alt="Menu">
-</header>
-
-<!-- MENU OVERLAY (kopi af den du allerede har) -->
-<div id="menuOverlay" class="menu-overlay">
-
-    <div class="menu-top">
-        <a href="login.html">
-            <img src="ikon/Log ind.svg" class="login-icon" alt="Log ind">
+        <a href="404.html" class="icon-link">
+            <img src="ikon/Log ind.svg" alt="Log ind" class="icon login-icon">
         </a>
 
-        <a href="index.html">
-            <img src="ikon/Logo.svg" class="logo" alt="Logo">
+        <a href="index.html" class="logo-link">
+            <img src="ikon/Logo.svg" alt="Logo" class="logo">
         </a>
 
-        <img src="ikon/krys.svg" id="closeMenu" class="close-icon" alt="Luk menu">
+        <img src="ikon/Burger_menu.svg" class="burger-icon" alt="Menu">
+    </header>
+
+    <!-- MENU OVERLAY (kopi af den du allerede har) -->
+    <div id="menuOverlay" class="menu-overlay">
+
+        <div class="menu-top">
+            <a href="login.html">
+                <img src="ikon/Log ind.svg" class="login-icon" alt="Log ind">
+            </a>
+
+            <a href="index.html">
+                <img src="ikon/Logo.svg" class="logo" alt="Logo">
+            </a>
+
+            <img src="ikon/krys.svg" id="closeMenu" class="close-icon" alt="Luk menu">
+        </div>
+
+        <nav class="menu-nav">
+
+            <a class="menu-item" href="haller.html">Haller</a>
+            <a class="menu-item" href="priser.html">Priser</a>
+            <a class="menu-item" href="førsteGang.html">Første gang</a>
+
+            <!-- Om Boulders dropdown -->
+            <div class="menu-item submenu-toggle">
+                Om Boulders <span class="arrow">></span>
+            </div>
+
+            <div class="submenu">
+                <a class="submenu-item" href="træning.html">Bouldering som træning</a>
+                <a class="submenu-item" href="404.html">Events</a>
+                <a class="submenu-item" href="404.html">CSR</a>
+            </div>
+
+            <a class="menu-item" href="404.html">Hold</a>
+
+            <div class="bottom-button">
+                <a class="cta" href="404.html">BLIV MEDLEM</a>
+            </div>
+
+            <div class="dansk">
+                <img src="ikon/dansk.svg" alt="Sprog">
+            </div>
+
+        </nav>
     </div>
 
-     <nav class="menu-nav">
+    <!-- OVERSKRIFT -->
+    <section class="firsttime-hero">
+        <h1>Første gang <br>hos Boulders</h1>
+    </section>
 
-        <a class="menu-item" href="haller.html">Haller</a>
-        <a class="menu-item" href="priser.html">Priser</a>
-        <a class="menu-item" href="førsteGang.html">Første gang</a>
+    <!-- INDHOLD -->
+    <main class="firsttime-content">
+        <h3>Velkommen til Boulders</h3>
 
-        <!-- Om Boulders dropdown -->
-        <div class="menu-item submenu-toggle">
-            Om Boulders <span class="arrow">></span>
+        <p>Hos os handler det om bevægelse, grin og fællesskab. Du behøver ikke erfaring, styrke eller særligt udstyr.
+        </p>
+        <p>Kom som du er — vi tager dig igennem det hele.</p>
+
+        <!-- YOUTUBE VIDEO – CENTRERET -->
+        <div class="video-wrapper">
+            <iframe src="https://youtu.be/W-4skXhGWM0?si=G_jfH1XpbuKpNGFp" title="YouTube video" frameborder="0"
+                allowfullscreen>
+            </iframe>
         </div>
 
-        <div class="submenu">
-            <a class="submenu-item" href="træning.html">Bouldering som træning</a>
-            <a class="submenu-item" href="404.html">Events</a>
-            <a class="submenu-item" href="404.html">CSR</a>
+        <h3>Sådan foregår dit første besøg</h3>
+
+        <!-- 1 -->
+        <p><strong>1. Ankomst</strong> <br>
+            Gå til receptionen og sig, at du er ny. Vi hjælper dig med at købe et daypass og svarer på dine spørgsmål.
+        </p>
+
+
+
+        <div class="center-img">
+            <img src="ilu/receptionen.svg" alt="Ankomst illustration">
         </div>
 
-        <a class="menu-item" href="404.html">Hold</a>
+        <!-- 2 -->
+        <p><strong>2. Udstyr</strong><br>
+            Du kan leje klatresko og kalk i baren. Der kræves intet særligt udstyr for at starte.</p>
 
-        <div class="bottom-button">
-            <a class="cta" href="404.html">BLIV MEDLEM</a>
+
+
+        <div class="center-img">
+            <img src="ilu/sko.svg" alt="Udstyr illustration">
         </div>
 
-        <div class="dansk">
-          <img src="ikon/dansk.svg" alt="Sprog">
+        <!-- 3 -->
+        <p><strong>3. Introduktion og sikkerhed</strong> <br>
+            Vi giver dig en kort, rolig intro til hallen, væggene og de få sikkerhedsregler, du skal kende. Det tager
+            2–3 minutter, og vi viser dig det hele fysisk</p>
+
+
+        <div class="center-img">
+            <img src="ilu/nemvæg.svg" alt="Introduktion illustration">
         </div>
 
-    </nav>
-</div>
+        <!-- 4 -->
+        <p><strong>4. Vælg din første væg</strong> <br>
+            Vi anbefaler, at du starter i de letteste farver. De kræver ingen teknik, bare nysgerrighed</p>
 
-<section class="firsttime-hero">
-    <h1>Første gang <br>hos Boulders</h1>
+
+        <div class="center-img">
+            <img src="ilu/nivo.png" alt="Vælg væg illustration">
+        </div>
+
+        <!-- 5 -->
+        <p><strong>5. Prøv dig frem i dit eget tempo</strong> <br>
+            Hold pauser, mærk efter og tag det roligt.</p>
+
+        <br><br>
+
+
+        <p><strong> Hvordan det føles første gang</strong> <br>
+            Mange tror, at “alle andre er eksperter”. Det er de ikke.<br>
+            De fleste starter præcis som dig: lidt spændte og nysgerrige.</p>
+
+        <br><br>
+
+        <p><strong>Hos os er det helt okay at:</strong> <br>
+            * Spørge igen <br>
+            * Prøve noget om <br>
+            * Ikke kunne nå helt op <br>
+            * Grine af det hele undervejs <br>
+            Det vigtigste er, at du føler dig tryg.
+        </p>
+
+        <br><br>
+
+        <p><strong>Efter klatringen</strong> <br>
+            * Slap af i caféen med økologisk kaffe <br>
+            * Snak med andre eller bare mærk roen efter klatringen <br>
+            * Spørg personalet, hvis du har lyst til næste step.</p>
+
+        <br><br>
+
+
+        <p><strong>Alle kan være med</strong> <br>
+            Uanset om det er din første dag eller din tiende, er du velkommen.<br>
+            Klatring er lige så meget fællesskab som det er bevægelse — og hos os er der plads til alle niveauer, aldre
+            og højder.</p>
+
+        <br><br>
+
+        <p><strong>Har du flere spørgsmål?</strong> <br>
+            Du får svar på 99 % af dem i vores FAQ.</p>
+
+
 </section>
 
-<!-- SIDEINDHOLD -->
-<main style="padding: 40px;">
-    <h1>Første gang</h1>
-    <p>Her kommer alt dit indhold til "Første gang".</p>
-</main>
+    </main>
 
-<script src="Script.js"></script>
+    <script src="Script.js"></script>
 </body>
+
 </html>
