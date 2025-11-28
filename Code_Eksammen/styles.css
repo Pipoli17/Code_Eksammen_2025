@@ -1,0 +1,248 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-black);
+}
+/*Laver root for at gøre det lætter for mig, hvis det skal ske ændringer undervejs*/
+:root {
+
+     /* FARVER VARIABLER */
+  --pink: #EC2BD3;
+  --green: #00A550;
+  --blue: #4C73FF;
+  --purple: #66308C;
+  --yellow: #FBE400;
+  --orange: #FFA500;
+  --black: #040507;
+  --bg-black: #11151C;
+  --white: #FFFFFF;
+  --bt-grey: #E7E7E7;
+
+    /* TYPOGRAFI VARIABLER */
+  --font-poppins: "Poppins", sans-serif;
+  --font-proxima: "Proxima Nova", sans-serif;
+
+  --h1-size: 40px;
+  --h2-size: 20px;
+  --h3-size: 24px;
+  --p-size: 16px;
+
+  --h1-weight: 900;   /* black */
+  --h2-weight: 700;   /* bold */
+}
+
+/* ===== TYPOGRAFI ===== */
+
+h1 {
+  font-family: var(--font-poppins);
+  font-weight: var(--h1-weight);
+  font-size: var(--h1-size);
+  color: var(--white);
+  margin: 50px 25px;
+}
+
+h2 {
+  font-family: var(--font-poppins);
+  font-weight: var(--h2-weight);
+  font-size: var(--h2-size);
+  color: var(--white);
+  margin: 0 0 12px 0;
+}
+
+h3 {
+  font-family: var(--font-proxima);
+  font-size: var(--h3-size);
+  font-weight: 600;  /* du nævnte ikke weight – jeg har sat en neutral */
+  color: var(--white);
+  margin: 0 0 8px 0;
+}
+
+p {
+  font-family: var(--font-proxima);
+  font-size: var(--p-size);
+  color: var(--white);
+  margin: 0 0 12px 0;
+}
+
+
+/* ====== STANDARD: MOBIL FØRST ====== */
+
+/* Skjul beskeden på mobil */
+.mobilefirst {
+    display: none;
+}
+
+/* Desktop > 600px */
+@media screen and (min-width: 600px) {
+    .mobilefirst {
+        display: block;
+        background: #11151C;
+        color: white;
+        padding: 20px;
+    }
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--bg-black);
+    padding: 35px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative; /* gør logo-centrering mulig */
+}
+
+/* Ikoner i siderne */
+.icon-link,
+.burger-icon {
+    z-index: 10; /* så logo ikke overlapper */
+}
+
+/* CENTRERET logo (som i menuen) */
+.logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 50px;
+}
+
+/* Ikoner til venstre og højre */
+.login-icon {
+    height: 28px;
+}
+
+.burger-icon {
+    height: 25px;
+    cursor: pointer;
+}
+
+
+/* ====== MENU OVERLAY ====== */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-black);
+    z-index: 9999;
+    justify-content: space-between;
+    align-items: center;
+
+    display: none; /* skjult default */
+
+    overflow-y: auto;
+}
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* IKON — LOGO — CLOSE */
+    padding: 25px 20px;
+    background: var(--bg-black);
+    border-bottom: 6px solid var(--white);
+}
+
+.menu-top img {
+    height: 28px;   /* justér som du vil */
+}
+
+/* Gør logo større end ikonerne */
+.menu-top .logo {
+    height: 50px;   /* gør logoet større end de andre */
+}
+
+
+/* Pink menu items */
+.menu-item {
+    background: var(--pink);
+    color: var(--white);
+    padding: 18px 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom: 6px solid var(--white);
+    display: block;
+    text-decoration: none;
+}
+
+/* Om Boulders toggle */
+.submenu-toggle {
+    background: var(--pink);
+    color: var(--white);
+    padding: 18px 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom: 6px solid var(--white);
+    cursor: pointer;
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    background: var(--purple);
+}
+
+.submenu-item {
+    padding: 18px 16px;
+    display: block;
+    border-bottom: 6px solid var(--white);
+    color: var(--white);
+    font-family: var(--font-poppins);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* CTA-knap */
+.bottom-button {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.cta {
+    background: var(--pink);
+    padding: 8px 30px;
+    border-radius: 50px;
+    color: white;
+    font-family: var(--font-poppins);
+    font-weight: 1000;
+    font-size: 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+/*Sporg*/
+
+.dansk {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* X ikon styling */
+.close-icon {
+    height: 28px;
+    cursor: pointer;
+}
+
+
+/* ====== FØRSTE GANG CSS ====== */
+/* ===== HERO SEKTION TIL FØRSTE GANG ===== */
+.firsttime-hero {
+    position: relative;
+    width: 100%;
+    height: 450px; /* juster højde efter behov */
+    background-image: url(img/førsteGangBg.png);
+
+    background-size: cover;       /* gør at billede altid fylder */
+    background-position: center;  /* holder fokus i midten */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;        /* placerer H1 nederst på billedet */
+}

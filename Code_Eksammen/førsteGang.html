@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobil Test</title>
+    <title>Første gang</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+<!-- HEADER (virker på alle sider) -->
 <header class="header">
 
-    <!-- Log ind ikon -->
     <a href="login.html" class="icon-link">
         <img src="ikon/Log ind.svg" alt="Log ind" class="icon login-icon">
     </a>
 
-    <!-- Logo -->
     <a href="index.html" class="logo-link">
         <img src="ikon/Logo.svg" alt="Logo" class="logo">
     </a>
 
-    <!-- Burger menu -->
-    
     <img src="ikon/Burger_menu.svg" class="burger-icon" alt="Menu">
-
 </header>
-<!-- OVERLAY MENU -->
+
+<!-- MENU OVERLAY (kopi af den du allerede har) -->
 <div id="menuOverlay" class="menu-overlay">
 
-    <!-- top bar inde i menuen -->
     <div class="menu-top">
         <a href="login.html">
             <img src="ikon/Log ind.svg" class="login-icon" alt="Log ind">
@@ -42,8 +38,7 @@
         <img src="ikon/krys.svg" id="closeMenu" class="close-icon" alt="Luk menu">
     </div>
 
-    <!-- NAVIGATION -->
-    <nav class="menu-nav">
+     <nav class="menu-nav">
 
         <a class="menu-item" href="haller.html">Haller</a>
         <a class="menu-item" href="priser.html">Priser</a>
@@ -71,18 +66,18 @@
         </div>
 
     </nav>
-
 </div>
 
+<section class="firsttime-hero">
+    <h1>Første gang <br>hos Boulders</h1>
+</section>
 
+<!-- SIDEINDHOLD -->
+<main style="padding: 40px;">
+    <h1>Første gang</h1>
+    <p>Her kommer alt dit indhold til "Første gang".</p>
+</main>
 
-
-    <!-- BESKED SOM KUN SKAL VISES PÅ DESKTOP -->
-    <section class="mobilefirst">
-        <h1>!! DENNE SIDE ER KUN TIL TELEFON !!</h1>
-        <h2>Indstil venligst skærmstørrelsen...</h2>
-    </section>
-
+<script src="Script.js"></script>
 </body>
-  <script src="Script.js"></script>
 </html>
