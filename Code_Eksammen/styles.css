@@ -94,8 +94,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    position: relative; /* gør logo-centrering mulig */
 }
 
 /* Ikoner i siderne */
@@ -157,6 +155,7 @@ p {
 /* Gør logo større end ikonerne */
 .menu-top .logo {
     height: 50px;   /* gør logoet større end de andre */
+    
 }
 
 
@@ -329,4 +328,25 @@ p {
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-top;        /* placerer H1 nederst på billedet */ 
+}
+
+/* ================= HALLER/Facilitet ================= */
+.error-section2 {
+    width: 100%;
+    height: 100vh; /* fuld højde */
+    background-image: url('img/haller404.svg'); /* ← skift til dit billede */
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    position: relative;
+}
+
+.bg404 {
+  background: linear-gradient(to bottom, var(--bg-black), var(--pink));
+
 }
