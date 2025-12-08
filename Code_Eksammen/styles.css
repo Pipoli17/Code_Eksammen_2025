@@ -296,9 +296,11 @@ p {
 }
 
 .bg404 {
+  min-height: 100vh;
   background: linear-gradient(to bottom, var(--bg-black), var(--pink));
-
+  background-attachment: fixed; /* så gradienten altid dækker */
 }
+
 /* KNAPPEN */
 .back-btn {
     display: inline-block;
@@ -333,7 +335,7 @@ p {
 /* ================= HALLER/Facilitet ================= */
 .error-section2 {
     width: 100%;
-    height: 100vh; /* fuld højde */
+    height: 76vh; /* fuld højde */
     background-image: url('img/haller404.svg'); /* ← skift til dit billede */
     background-size: auto;
     background-position: center;
@@ -346,7 +348,312 @@ p {
     position: relative;
 }
 
-.bg404 {
-  background: linear-gradient(to bottom, var(--bg-black), var(--pink));
 
+/* Grøn box der swipper til*/
+.toggle-wrapper {
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+    background: #2E2E2E;
+    padding: 6px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
 }
+
+/* DEN GRØNNE SLIDER */
+.toggle-slider {
+    position: absolute;
+    width: calc(50% - 6px);
+    height: calc(100% - 12px);
+
+    background: var(--green);
+    border-radius: 15px;
+
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+/* KNAPPER */
+.toggle-btn {
+    position: relative;
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+    border-radius: 40px;
+
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 380;
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    z-index: 2;
+}
+
+/* IKON JUSTERES */
+.toggle-btn img {
+    height: 30px;
+}
+
+/*---Facelitet siden----*/
+
+/* ====== FACILITY TABLE ====== */
+.facility-box {
+    display: none;
+    width: 85%;
+    margin: 50px auto;
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #2E2E2E;
+    font-family: var(--font-proxima);
+   
+}
+
+.facility-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid #5a5a5a;
+    color: white;
+}
+
+/* Fjern kant på sidste */
+.facility-row:last-child {
+    border-bottom: none;
+}
+
+.col-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 0px; 
+}
+.col-left {
+    position: relative;
+}
+.facility-row.header .col-right {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.col-right {
+    width: 45%;
+    text-align: center;     /* <-- centrér alt i højre kolonne */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Header */
+.facility-row.header {
+    background: #1E1E1E;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Info-ikon tæt på midterlinjen */
+.info-icon {
+    position: absolute;
+    right: 10px;     /* skubber ikonet helt til højre i venstre kolonne */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+
+   
+    cursor: pointer;
+    background: none;
+    border: 1.5px solid #ccc;
+    outline: none;
+    padding: 0;
+}
+
+
+/* Grønne flueben */
+.check {
+    color: var(--green);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Grøn areal tekst */
+.area {
+    color: var(--green);
+    font-weight: bold;
+}
+/* Lodret skillelinje mellem venstre og højre kolonne */
+.facility-row {
+    position: relative;
+}
+
+.facility-row::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #5a5a5a; /* samme farve som de horisontale streger */
+    left: 50%; /* samme bredde som venstre kolonne */
+}
+
+/*---------------Infobox-------------*/
+/* Fakta box styling */
+.fact-box {
+  position: fixed;
+  top: 27%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: 400px;
+  background: #1E1E1E; /* mørk baggrund */
+  border: 2px solid var(--green); /* grøn kant */
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 10000;
+
+  box-shadow: 0 0 10px var(--green);
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.fact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fact-header h3 {
+  margin: 0;
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.fact-close {
+  background: none;
+  border: none;
+  color: var(--green);
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.fact-content img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.fact-content p {
+  font-family: var(--font-proxima);
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+}
+/* =================================================== Priser =================================================== */
+
+
+/* Layout */
+.price-boxes {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Selve boksen */
+.box-1, .box-2, .box-3, .box-4, .box-5 {
+  background: #343434;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+/* Titel-pill */
+.box-title {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  padding: 6px 20px;
+  border-radius: 20px;
+  white-space: nowrap; 
+}
+
+/* Indhold */
+.box-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.5;
+}
+.box-content p {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #E7E7E7
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-family: var(--font-proxima);
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+
+/* CTA-knapper */
+.box-cta {
+  display: block;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--white)
+}
+
+/* Farver til titel + knapper + border */
+.box-1 { border: 2px solid var(--pink) }
+.box-2 { border: 2px solid var(--green)}
+.box-3 { border: 2px solid var(--orange)}
+.box-4 { border: 2px solid var(--blue)}
+.box-5 { border: 2px solid var(--purple)}
+
+.pink { background: var(--pink); }
+.green { background:var(--green) }
+.orange { background: var(--orange); }
+.blue { background: var(--blue) }
+.purple { background: var(--purple) }
+
+.pink-cta { background: var(--pink); border: 2px solid var(--white);}
+.green-cta { background: var(--green); border: 2px solid var(--white); }
+.orange-cta { background: var(--orange); border: 2px solid var(--white); }
+.blue-cta { background: var(--blue); border: 2px solid var(--white);}
+.purple-cta { background: var(--purple); border: 2px solid var(--white);}
+

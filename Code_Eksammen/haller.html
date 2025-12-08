@@ -23,7 +23,7 @@
         <img src="ikon/Burger_menu.svg" class="burger-icon" alt="Menu">
     </header>
 
-    <!-- MENU OVERLAY (kopi af den du allerede har) -->
+    <!-- MENU OVERLAY -->
     <div id="menuOverlay" class="menu-overlay">
 
         <div class="menu-top">
@@ -66,12 +66,88 @@
             </div>
 
         </nav>
+   
+   
     </div>
+
+<!--Knppe til at skifte mellem facelitet og hal oversigt-->
+    <div class="toggle-wrapper">
+    <div class="toggle-slider"></div>
+
+    <button id="btnHal" class="toggle-btn active">
+        <img src="ikon/Hal_oversigt.svg" alt="">
+        Hal oversigt
+    </button>
+
+    <button id="btnFac" class="toggle-btn">
+        Faciliteter
+    </button>
+
+</div>
+<!--Inhold til facelitet-->
+<div class="facility-box">
+    <div class="facility-row header">
+        <div class="col-left">Facilitet/Hal</div>
+        <div class="col-right">Aarhus Nord ▼</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">Styrketræning <button class="info-icon">i</button>
+</div>
+        <div class="col-right check">✔</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">Moon Board <button class="info-icon">i</button>
+</div>
+        <div class="col-right check">✔</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">Kilter Board <button class="info-icon">i</button>
+</div>
+        <div class="col-right check">✔</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">CampusBoard <button class="info-icon">i</button>
+</div>
+        <div class="col-right check">✔</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">Spray <button class="info-icon">i</button>
+</div>
+        <div class="col-right check">✔</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">Gode vibes <button class="info-icon">i</button>
+</div>
+        <div class="col-right check">✔</div>
+    </div>
+
+    <div class="facility-row">
+        <div class="col-left">Areal</div>
+        <div class="col-right area">1100 m2</div>
+    </div>
+
+</div>
+
+<!-- Fakta box popup -->
+<div id="factBox" class="fact-box hidden">
+  <div class="fact-header">
+    <h3 id="factTitle">Titel</h3>
+    <button id="factClose" class="fact-close">✕</button>
+  </div>
+  <div class="fact-content">
+    <img id="factImage" src="" alt="Fact Image" />
+    <p id="factText">Her kommer fakta teksten.</p>
+  </div>
+</div>
+
 <section class="error-section2">
-    <div class="error-content">
-
-
-    </div>
+    <div class="error-content"> </div>
 </section>
     
  <script src="Script.js"></script>
