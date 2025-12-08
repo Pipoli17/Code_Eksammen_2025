@@ -86,44 +86,13 @@ p {
 
 /* ===== HEADER ===== */
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
-    padding: 25px 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--pink);
 }
-
-/* Ikoner i siderne */
-.icon-link,
-.burger-icon {
-    z-index: 10; /* så logo ikke overlapper */
-}
-
-/* CENTRERET logo (som i menuen) */
-.logo-link {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo {
-    height: 50px;
-}
-
-/* Ikoner til venstre og højre */
-.login-icon {
-    height: 28px;
-}
-
-.burger-icon {
-    height: 25px;
-    cursor: pointer;
-}
-
 
 /* ====== MENU OVERLAY ====== */
 
@@ -139,26 +108,6 @@ p {
 
     overflow-y: auto;
 }
-
-.menu-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  /* IKON — LOGO — CLOSE */
-    padding: 20px 20px;
-  
-    border-bottom: 6px solid var(--white);
-}
-
-.menu-top img {
-    height: 28px;   /* justér som du vil */
-}
-
-/* Gør logo større end ikonerne */
-.menu-top .logo {
-    height: 50px;   /* gør logoet større end de andre */
-    
-}
-
 
 /* Pink menu items */
 .menu-item {
@@ -200,6 +149,9 @@ p {
     text-decoration: none;
     font-size: 20px;
 }
+.menu-nav .menu-item:first-child {
+    border-top: 6px solid var(--white);
+}
 
 /* CTA-knap */
 .bottom-button {
@@ -231,10 +183,42 @@ p {
     cursor: pointer;
 }
 
-/* ============================== FORSIDE =============================== */ 
+/* FÆLLES STYLING TIL HEADER OG MENU-TOP */
+.topbar-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 20px;
+
+    position: relative;
+}
+
+/* CENRER LOGO I MIDTEN */
+.topbar-layout .logo {
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+     margin-top: -25px;
+}
+
+/* Ikon-størrelser */
+.topbar-layout .login-icon,
+.topbar-layout .close-icon {
+    height: 28px;
+}
+
+.topbar-layout .burger-icon {
+    height: 25px;
+    cursor: pointer;
+}
+
+
+/* ==============================================FORSIDE ============================================= */ 
 .Forside-bg-section {
     width: 100%;
-    height: 88vh; /* fuld højde */
+    height: 100vh; /* fuld højde */
     background-image: url('img/bg_forside.png'); /* ← skift til dit billede */
     background-size: cover;
     background-position: center;
@@ -263,14 +247,15 @@ p {
     margin-top: 180%; /* flytter knap + tekst længere ned */
 }
 
-/* ================= FØRSTE GANG CSS ================= */
+/* =============================================FØRSTE GANG ======================================== */
 
 /*hero section */
 .firsttime-hero {
     position: relative;
     width: 100%;
     height: 450px; /* juster højde efter behov */
-    background-image: url(img/førsteGangBg.png);
+    background-image: url(img/bg-første.png);
+    margin-top: 21%;
 
     background-size: cover;       /* gør at billede altid fylder */
     background-position: center;  /* holder fokus i midten */
@@ -309,15 +294,16 @@ p {
     height: auto;
 }
 
-/* ================= 404 SIDE ================= */
+/* ======================================== 404 SIDE ============================================ */
 
 .error-section {
     width: 100%;
-    height: 88vh; /* fuld højde */
+    height: 100vh; /* fuld højde */
     background-image: url('img/404.svg'); /* ← skift til dit billede */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-top: 10%;
 
     display: flex;
     justify-content: center; 
@@ -329,7 +315,6 @@ p {
 .bg404 {
   min-height: 100vh;
   background: linear-gradient(to bottom, var(--bg-black), var(--pink));
-  background-attachment: fixed; /* så gradienten altid dækker */
 }
 
 /* KNAPPEN */
@@ -349,12 +334,13 @@ p {
     margin-top: 130px; /* flytter knap + tekst længere ned */
 }
 
-/* ================= TRÆNING SIDE ================= */
+/* =========================================== TRÆNING SIDE ====================================== */
 .firsttime-hero-2 {
     position: relative;
     width: 100%;
     height: 450px; /* juster højde efter behov */
-    background-image: url(img/træning.png);
+    background-image: url(img/bg-trænig.png);
+    margin-top: 21%;
 
     background-size: cover;       /* gør at billede altid fylder */
     background-position: center;  /* holder fokus i midten */
@@ -363,10 +349,10 @@ p {
     align-items: flex-top;        /* placerer H1 nederst på billedet */ 
 }
 
-/* ================= HALLER/Facilitet ================= */
+/* =========================================== HALLER/Facilitet ==================================== */
 .error-section2 {
     width: 100%;
-    height: 76vh; /* fuld højde */
+    height: 75vh; /* fuld højde */
     background-image: url('img/haller404.svg'); /* ← skift til dit billede */
     background-size: auto;
     background-position: center;
@@ -384,13 +370,12 @@ p {
 .toggle-wrapper {
     position: relative;
     width: 85%;
-    margin: 80px auto 0px auto;
+    margin: 40% auto 0px auto;
     background: #2E2E2E;
     padding: 7px;
     border-radius: 20px;
 
     display: flex;
-    justify-content: space-between;
 }
 
 /* DEN GRØNNE SLIDER */
@@ -440,6 +425,7 @@ p {
     display: none;
     width: 85%;
     margin: 50px auto;
+    margin-bottom: 55%;
     border: 2px solid var(--green);
     border-radius: 12px;
     overflow: hidden;
@@ -607,6 +593,10 @@ p {
 }
 /* =================================================== Priser =================================================== */
 
+.priser-h1 {
+    margin-top: 30%;
+    text-align: center; 
+}
 
 /* Layout */
 .price-boxes {

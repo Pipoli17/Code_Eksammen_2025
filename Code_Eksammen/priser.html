@@ -10,73 +10,76 @@
 
 <body>
 
-    <header class="header">
+   <header class="header">
+  <div class="topbar-layout">
+    <!-- venstre ikon -->
+    <a href="404.html" class="icon-link">
+      <img src="ikon/Log ind.svg" alt="Log ind" class="login-icon">
+    </a>
 
-        <!-- Log ind ikon -->
-        <a href="404.html" class="icon-link">
-            <img src="ikon/Log ind.svg" alt="Log ind" class="icon login-icon">
-        </a>
+    <!-- centreret logo -->
+    <a href="index.html" class="logo-link">
+      <img src="ikon/Logo.svg" alt="Logo" class="logo">
+    </a>
 
-        <!-- Logo -->
-        <a href="index.html" class="logo-link">
-            <img src="ikon/Logo.svg" alt="Logo" class="logo">
-        </a>
+    <!-- højre burger ikon -->
+    <img src="ikon/Burger_menu.svg" class="burger-icon" alt="Menu">
+  </div>
+</header>
 
-        <!-- Burger menu -->
 
-        <img src="ikon/Burger_menu.svg" class="burger-icon" alt="Menu">
+  <!-- OVERLAY MENU -->
+  <div id="menuOverlay" class="menu-overlay">
 
-    </header>
-    <!-- OVERLAY MENU -->
-    <div id="menuOverlay" class="menu-overlay">
+    <!-- top bar inde i menuen -->
+    <div class="menu-top topbar-layout">
+    <a href="l404.html">
+        <img src="ikon/Log ind.svg" class="login-icon" alt="Log ind">
+    </a>
 
-        <!-- top bar inde i menuen -->
-        <div class="menu-top">
-            <a href="login.html">
-                <img src="ikon/Log ind.svg" class="login-icon" alt="Log ind">
-            </a>
+    <a href="index.html">
+        <img src="ikon/Logo.svg" class="logo" alt="Logo">
+    </a>
 
-            <a href="index.html">
-                <img src="ikon/Logo.svg" class="logo" alt="Logo">
-            </a>
+    <img src="ikon/krys.svg" id="closeMenu" class="close-icon" alt="Luk menu">
+</div>
 
-            <img src="ikon/krys.svg" id="closeMenu" class="close-icon" alt="Luk menu">
-        </div>
 
-        <!-- NAVIGATION -->
-        <nav class="menu-nav">
+    <!-- NAVIGATION -->
+    <nav class="menu-nav">
 
-            <a class="menu-item" href="haller.html">Haller</a>
-            <a class="menu-item" href="priser.html">Priser</a>
-            <a class="menu-item" href="førsteGang.html">Første gang</a>
+      <a class="menu-item" href="haller.html">Haller</a>
+      <a class="menu-item" href="priser.html">Priser</a>
+      <a class="menu-item" href="førsteGang.html">Første gang</a>
 
-            <!-- Om Boulders dropdown -->
-            <div class="menu-item submenu-toggle">
-                Om Boulders <span class="arrow">></span>
-            </div>
+      <!-- Om Boulders dropdown -->
+      <div class="menu-item submenu-toggle">
+        Om Boulders <span class="arrow">></span>
+      </div>
 
-            <div class="submenu">
-                <a class="submenu-item" href="træning.html">Bouldering som træning</a>
-                <a class="submenu-item" href="404.html">Events</a>
-                <a class="submenu-item" href="404.html">CSR</a>
-            </div>
+      <div class="submenu">
+        <a class="submenu-item" href="træning.html">Bouldering som træning</a>
+        <a class="submenu-item" href="404.html">Events</a>
+        <a class="submenu-item" href="404.html">CSR</a>
+      </div>
 
-            <a class="menu-item" href="404.html">Hold</a>
+      <a class="menu-item" href="404.html">Hold</a>
 
-            <div class="bottom-button">
-                <a class="cta" href="404.html">BLIV MEDLEM</a>
-            </div>
+      <div class="bottom-button">
+        <a class="cta" href="404.html">BLIV MEDLEM</a>
+      </div>
 
-            <div class="dansk">
-                <img src="ikon/dansk.svg" alt="Sprog">
-            </div>
+      <div class="dansk">
+        <img src="ikon/dansk.svg" alt="Sprog">
+      </div>
 
-        </nav>
+    </nav>
 
-    </div>
+  </div>
 
-    <section>
-        <h1 style="text-align: center; margin: 30px;">Priser</h1>
+
+    <section class="priser-h1">
+        <h1>Priser</h1>
     </section>
 
     <section class="price-boxes">
@@ -255,6 +258,71 @@
 
     </section>
 
+     <!-----------------------fotter ------------------------->
+    <footer class="footer">
+      <div class="footer-container">
+
+   <!-- VENSTRE SIDE -->
+  <div class="footer-left">
+
+    <div class="footer-column">
+      <h3>Følg os</h3>
+      <div class="social-icons">
+        <img src="ikon/ig.png" alt="Instagram">
+        <img src="ikon/fb.png" alt="Facebook">
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Mere</h3>
+      <a href="#">Blog</a>
+      <a href="#">Nyhedsmail</a>
+      <a href="#">FAQ</a>
+      <a href="#">Community Clubs</a>
+      <a href="#">Grading</a>
+      <a href="#">Bloc life Loyalty Program</a>
+    </div>
+
+  </div>
+
+
+    <!-- HØJRE SIDE -->
+  <div class="footer-right">
+
+    <div class="footer-column">
+      <h3>Praktisk</h3>
+      <a href="#">Vilkår og betingelser</a>
+      <a href="#">Børneklatring</a>
+      <a href="#">Ansvarsfraskrivelse</a>
+      <a href="#">Job i Boulders</a>
+      <a href="#">Privatlivspolitik</a>
+      <a href="#">Cookiepolitik</a>
+      <a href="#">Smileys</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Kontakt</h3>
+      <p>+45 00 00 00 00 <br> hej@boulders.dk </p>
+  
+    </div>
+
+  </div>
+
+</div>
+
+      <!-- Logo og bundtekst -->
+      <div class="footer-bottom">
+        <img src="ikon/Logo.svg" alt="Boulders Logo" class="footer-logo">
+
+        <p class="footer-tagline">CLIMBING, COFFEE AND COMMUNITY</p>
+        <p class="footer-sub">Danmarks netværk af klatrehaller</p>
+
+        <p class="copyright">© 2025 Boulders</p>
+      </div>
+
+    </footer>
+
+    <!----------------------- slut fotter ------------------------->
 
 
 </body>
