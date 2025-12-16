@@ -3,9 +3,9 @@
 const facts = {
   "Styrketræning": {
     img: "img/træning.png",
-    text: `Hos Boulders handler gode vibes om at skabe et sted, hvor du føler dig velkommen fra første sekund - uanset niveau. <br><br>
-    Folk hjælper hinanden, deler små tips og hepper, når man prøver noget nyt. Vi lægger vægt på hjælpsomhed, tryghed og plads til alle højder. <br><br>
-    Gode vibes er følelsen af, at du hører til - lige præcis som du er.`
+    text: `Udover klatring tilbyder Boulders også styrketræningsfaciliteter, der kan bruges som supplement til din træning. <br><br>
+    Her kan du arbejde målrettet med styrke, stabilitet og kontrol, så du understøtter din udvikling på væggen. <br><br>
+    Et oplagt sted at optimere din træning og skabe balance mellem klatring og styrke. I dit eget tempo.`
   },
   "Moon Board": {
     img: "img/moonborad.png",
@@ -66,3 +66,5 @@ infoButtons.forEach(btn => {
 factClose.addEventListener("click", () => {
   factBox.classList.add("hidden");
 });
+
+//--Når brugeren klikker på luk-knappen, bliver klassen “hidden” tilføjet igen. Infoboksen forsvinder dermed fra skærmen.--//
