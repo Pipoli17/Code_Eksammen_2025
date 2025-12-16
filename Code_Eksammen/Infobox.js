@@ -37,16 +37,29 @@ const facts = {
   }
 };
 
+//--Her oprettes et JavaScript-objekt, som fungerer som en mini-database. Hver facilitet (fx "Moon Board") har: et billede (img), en tekst (text)--//
+
+
 
 const infoButtons = document.querySelectorAll(".info-icon");
+//--querySelectorAll vælger alle elementer på html-siden, der har klassen .info-icon. Som gør at info-knapper bliver fundet automatisk.-//
+
 infoButtons.forEach(btn => {
   btn.addEventListener("click", () => {
+//--forEach løber igennem alle ikonerne. addEventListener("click") gør, at der sker noget, når brugeren klikker.--//
+
     const name = btn.dataset.name;
     const fact = facts[name];
+//--Hvert ikon har et data-attribut i HTML (fx data-name="Moon Board"). JavaScript bruger denne værdi til at slå op i facts-objektet. På den måde vises det rigtige billede og tekst til den facilitet, brugeren klikkede på.--//
+
+
     factTitle.textContent = name;
     factImage.src = fact.img;
     factText.innerHTML = fact.text;
+//--Infoboksen får nu: Overskrift, Billede og beskrivelse--/
+
     factBox.classList.remove("hidden");
+//--nfoboksen er skjult som udgangspunkt (CSS-klassen “hidden”).Når klassen fjernes, bliver boksen synlig som overlay.--//
   });
 });
 

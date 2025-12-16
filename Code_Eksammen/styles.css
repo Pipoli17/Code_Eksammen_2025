@@ -7,7 +7,7 @@ html, body {
 /*Laver root for at gøre det lætter for mig, hvis det skal ske ændringer undervejs*/
 :root {
 
-     /* FARVER VARIABLER */
+/* FARVER VARIABLER */
   --pink: #EC2BD3;
   --green: #00A550;
   --blue: #4C73FF;
@@ -19,7 +19,7 @@ html, body {
   --white: #FFFFFF;
   --bt-grey: #E7E7E7;
 
-    /* TYPOGRAFI VARIABLER */
+  /* TYPOGRAFI VARIABLER */
   --font-poppins: "Poppins", sans-serif;
   --font-proxima: "Proxima Nova", sans-serif;
 
@@ -33,7 +33,6 @@ html, body {
 }
 
 /* ===== TYPOGRAFI ===== */
-
 h1 {
   font-family: var(--font-poppins);
   font-weight: var(--h1-weight);
@@ -53,7 +52,7 @@ h2 {
 h3 {
   font-family: var(--font-proxima);
   font-size: var(--h3-size);
-  font-weight: 800;  /* du nævnte ikke weight – jeg har sat en neutral */
+  font-weight: 800; 
   color: var(--white);
   margin: 0 0 8px 0;
 }
@@ -65,6 +64,7 @@ p {
   margin: 0 0 12px 0;
   line-height: 25px
 }
+
 
 
 /* ====== STANDARD: MOBIL FØRST ====== */
@@ -636,7 +636,7 @@ p {
 .box-content p {
   font-size: 14px;
   line-height: 1.2;
-  color: #E7E7E7
+  color: #9e9e9e
 }
 .price-row {
   display: flex;
