@@ -1,6 +1,5 @@
 :root {
-
-  /* FARVER VARIABLER */
+/* FARVER VARIABLER */
   --pink: #EC2BD3;
   --green: #00A550;
   --blue: #4C73FF;
@@ -12,7 +11,7 @@
   --white: #FFFFFF;
   --bt-grey: #E7E7E7;
 
-  /* TYPOGRAFI VARIABLER */
+  /* TYPOGRAFI VARIABLER e*/
   --font-poppins: "Poppins", sans-serif;
   --font-proxima: "Proxima Nova", sans-serif;
 
