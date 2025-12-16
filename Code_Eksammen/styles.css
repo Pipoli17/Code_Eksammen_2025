@@ -1,11 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-black);
-}
-
-/*Laver root for at gøre det lætter for mig, hvis det skal ske ændringer undervejs*/
 :root {
 
   /* FARVER VARIABLER */
@@ -34,6 +26,15 @@ body {
   --h2-weight: 700;
   /* bold */
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-black);
+}
+
+/*Laver root for at gøre det lætter for mig, hvis det skal ske ændringer undervejs*/
+
 
 /* ===== TYPOGRAFI ===== */
 h1 {
